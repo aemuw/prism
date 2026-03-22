@@ -8,10 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Features\Articles\" />
-    <Folder Include="Features\Auth\Commands\Login\" />
-    <Folder Include="Features\Auth\Commands\Logout\" />
-    <Folder Include="Features\Auth\Commands\RefreshToken\" />
-    <Folder Include="Features\Auth\Commands\VerifyEmail\" />
     <Folder Include="Features\Auth\Queries\GetCurrentUser\" />
     <Folder Include="Features\Users\" />
     <Folder Include="Features\Sources\" />
