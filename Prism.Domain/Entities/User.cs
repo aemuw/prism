@@ -47,6 +47,13 @@ namespace Prism.Domain.Entities
             UpdateTimestamp();
         }
 
+        public void SetVerificationCode(string code, DateTime expiry)
+        {
+            VerificationCode = code;
+            VerificationExpiry = expiry;
+            UpdateTimestamp();
+        }
+
         public void RevokeRefreshToken()
         {
             RefreshToken = null;
