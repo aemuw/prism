@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Features\Articles\" />
-    <Folder Include="Features\Auth\Queries\GetCurrentUser\" />
     <Folder Include="Features\Users\" />
     <Folder Include="Features\Sources\" />
     <Folder Include="Validators\" />
