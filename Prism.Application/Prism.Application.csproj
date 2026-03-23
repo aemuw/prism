@@ -7,7 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Articles\" />
+    <Folder Include="Features\Articles\Commands\UnsaveArticle\" />
+    <Folder Include="Features\Articles\Commands\SaveArticle\" />
+    <Folder Include="Features\Articles\Queries\GetByTag\" />
+    <Folder Include="Features\Articles\Queries\GetSavedArticles\" />
+    <Folder Include="Features\Articles\Queries\SearchArticles\" />
     <Folder Include="Features\Users\" />
     <Folder Include="Features\Sources\" />
     <Folder Include="Validators\" />
