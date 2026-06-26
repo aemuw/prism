@@ -26,18 +26,9 @@ namespace Prism.Application.Features.Articles.Queries.GetFeed
 
             var savedIds = savedArticleIds.Select(s => s.ArticleId).ToHashSet();
 
-            var items = articles.Select(a => new ArticleResponse
-            {
-                Id = a.Id,
-                Title = a.Title,
-                AiSummary = a.AiSummary,
-                Url = a.Url,
-                Author = a.Author,
-                SourceName = a.Source?.Name ?? string.Empty,
-                PublishedAt = a.PublishedAt,
-                Tags = a.Tags.Select(t => t.Name).ToList(),
-                IsSaved = savedIds.Contains(a.Id)
-            }).ToList();
+            var items = articles
+                .Select(a => ArticleMapper.ToResponse(a, savedIds.Contains(a.Id)))
+                .ToList();
 
             return new PagedResponse<ArticleResponse>
             {
