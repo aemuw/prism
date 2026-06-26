@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
 
 namespace Prism.Application.Features.Articles.Commands.UnsaveArticle.UnsaveArticleCommand
 {
-    internal class _
-    {
-    }
+    public record UnsaveArticleCommand(
+        Guid UserId,
+        Guid ArticleId
+    ) : IRequest<bool>;
 }

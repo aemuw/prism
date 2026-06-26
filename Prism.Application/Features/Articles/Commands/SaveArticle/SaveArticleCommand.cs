@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
 
 namespace Prism.Application.Features.Articles.Commands.SaveArticle
 {
-    internal class SaveArticleCommand
-    {
-    }
+    public record SaveArticleCommand(
+        Guid UserId,
+        Guid ArticleId
+    ) : IRequest<bool>;
 }
