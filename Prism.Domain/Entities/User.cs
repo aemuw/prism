@@ -9,7 +9,7 @@ namespace Prism.Domain.Entities
         public string PasswordHash { get; private set; } = string.Empty;
         public UserRole Role { get; private set; }
         public bool IsEmailVerified { get; private set; }
-
+        public bool IsBlocked { get; private set; }
         public string? VerificationCode { get; private set; }
         public DateTime? VerificationExpiry { get; private set; }
 
@@ -58,6 +58,18 @@ namespace Prism.Domain.Entities
         {
             RefreshToken = null;
             RefreshTokenExpiry = null;
+            UpdateTimestamp();
+        }
+
+        public void Block()
+        {
+            IsBlocked = true;
+            UpdateTimestamp();
+        }
+
+        public void Unblock()
+        {
+            IsBlocked = false;
             UpdateTimestamp();
         }
 

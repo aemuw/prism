@@ -8,6 +8,7 @@ namespace Prism.Domain.Interfaces
         Task<User?> GetByEmailAsync(string email);
         Task<User?> GetByUsernameAsync(string username);
         Task<User?> GetByRefreshTokenAsync(string refreshToken);
+        Task<IReadOnlyList<User>> GetAllAsync();
         Task<bool> ExistsAsync(string email);
         Task AddAsync(User user);
         Task UpdateAsync(User user);
